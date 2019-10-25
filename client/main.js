@@ -14,6 +14,8 @@ Template.body.helpers({
 Template.tweetform.events({
   'submit .tweetform'(evt) {
     evt.preventDefault()
-    console.log(evt)
+    const username = evt.target.username.value
+    const message = evt.target.message.value
+    console.log(username, message)
   }
 })
