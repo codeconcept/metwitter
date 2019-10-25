@@ -1,0 +1,10 @@
+<body class="container">
+  <h3>Welcome to Metwitter</h3>
+  <div>
+    {{>tweetform}}
+    <hr />
+    {{#each tweets}}
+    {{>tweet}}
+    {{/each}}
+  </div>
+</body>

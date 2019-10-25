@@ -1,27 +1,5 @@
-import { Template } from 'meteor/templating';
 import "../node_modules/bootstrap/scss/bootstrap.scss"
 // import 'bootstrap/dist/js/bootstrap.bundle';
 
-import './main.html';
-import { Tweets } from './../imports/api/tweets.js';
+import '../imports/ui/body.js'
 
-Template.body.helpers({
-  tweets() {
-    return Tweets.find({})
-  }
-})
-
-Template.tweetform.events({
-  'submit .tweetform'(evt) {
-    evt.preventDefault()
-    const title = evt.target.title.value
-    const author = evt.target.author.value
-    const message = evt.target.message.value
-    console.log(title, author, message)
-    Tweets.insert({
-      title,
-      author,
-      message
-    })
-  }
-})
