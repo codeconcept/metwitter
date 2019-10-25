@@ -10,3 +10,10 @@ Template.body.helpers({
     return Tweets.find({})
   }
 })
+
+Template.tweetform.events({
+  'submit .tweetform'(evt) {
+    evt.preventDefault()
+    console.log(evt)
+  }
+})
